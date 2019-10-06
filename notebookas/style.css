@@ -43,8 +43,8 @@ body{
     float: left;
     width: 200px;
     height: 40px;
-    background-color: blue;
-    opacity: .8;
+    background-color: black;
+    opacity: 0.8; 
     line-height: 40px;
     text-align: center;
     font-size: 20px;
@@ -54,15 +54,17 @@ body{
     color: black; /* teksto spalva meniu juostoje */
     display: block;
 }
-#Menu:hover{
-    background: none !important;
-}
 #Menu ul li a:hover{
 
     z-index: 10;
-     background-color: rgb(216, 9, 9);  
-
+    background-color: rgb(216, 9, 9);  
 }
+
+#Menu .darker {
+    opacity: 1 !important;
+}
+
+
 #Menu ul li ul li{
     display:none;
 }
