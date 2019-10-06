@@ -54,12 +54,40 @@
 					 </ul></li>
 				</ul>
 			</div>
-			<div id="Content">
-				<h2 id="pageTitle">Naujas uzrasa</h2>
-				<p>Tempor lacus aliquam class sapien per lacinia. Rutrum dolor malesuada.
-				Nullam risus nullam nibh suscipit. Pulvinar dolor ligula. Pulvinar urna litora a dapibus. Aliquet magna rutrum urna convallis. Sapien duis montes. Phasellus et magnis non venenatis risus consequat.
-				</p>
-			</div>
+            <div id="Content">
+                    <h2 id="pageTitle">Naujas užrašas</h2>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="tname">Užrašo pavadinimas</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="tname" name="taskname" placeholder="Užrašo pavadinimas..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="task_type">Užrašo tipas</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="uni">Universiteto</option>
+                                <option value="work">Darbo</option>
+                                <option value="freetime">Laisvalaikio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Užrašas</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Rašykite ką norite.." style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Pridėti užduotį">
+                    </div>
+                </div>
 		</div>
 		<div id="footer">
 			<p>Copyright &copy; Užduočių planavimo sistema</p>

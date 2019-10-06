@@ -22,48 +22,104 @@
 </html> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Užduočių planuoklis</title>
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Užduočių planuoklis</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	  		// čia rašomas JQuery kodas
+            $(function () {
+                $('#datepicker').datetimepicker();
+            });
+        });
+    </script>
+ </head>
+
 <body>
-	<div id="body">
-		<div id="header">
-		    <h2 id="slogan">Užduočių planavimo sistema</h2>
-		</div>
-		<div id="content">
-			<div id="Menu">
-				<ul>
-					<li><a href="index.html" title="Pagrindinis">Pagrindinis</a></li>
-					
-					<li><a href="uzduotys.html" title="Užduotys" class="active">Užduotys</a>
-					<ul>
-						<li><a href="uzduotys.html" >Aktyvios užduotys</a></li>
-						<li><a href="uzbaigtos_uzduotys.html">Užbaigtos užduotys</a></li>
-						<li><a href="nauja_uzduotis.html" class="active" >Nauja užduotis</a></li>
-						<li><a href="uzduociu_tipai.html">Užduočių tipai</a></li>
-						
-					 </ul></li>
-					<li><a href="uzrasai.html" title="Užrašai">Užrašai</a>
-					<ul>
-						<li><a href="uzrasai.html" >Užduočių užrašai</a></li>
-						<li><a href="ind_uzrasai.html" >Individualūs užrašai</a></li>
-						<li><a href="naujas_uzrasas.html">Naujas užrašas</a></li>
-						<li><a href="uzrasu_tipai.html">Užrašų tipai</a></li>
-					 </ul></li>
-				</ul>
-			</div>
-			<div id="Content">
-				<h2 id="pageTitle">Naujas užduotis</h2>
-				<p>Tempor lacus aliquam class sapien per lacinia. Rutrum dolor malesuada.
-				Nullam risus nullam nibh suscipit. Pulvinar dolor ligula. Pulvinar urna litora a dapibus. Aliquet magna rutrum urna convallis. Sapien duis montes. Phasellus et magnis non venenatis risus consequat.
-				</p>
-			</div>
-		</div>
-		<div id="footer">
-			<p>Copyright &copy; Užduočių planavimo sistema</p>
-		</div>
-	</div>
+    <div id="body">
+        <div id="header">
+            <h2 id="slogan">Užduočių planavimo sistema</h2>
+        </div>
+        <div id="content">
+            <div id="Menu">
+                <ul>
+                    <li><a href="index.html" title="Pagrindinis">Pagrindinis</a></li>
+
+                    <li><a href="uzduotys.html" title="Užduotys" class="active">Užduotys</a>
+                        <ul>
+                            <li><a href="uzduotys.html">Aktyvios užduotys</a></li>
+                            <li><a href="uzbaigtos_uzduotys.html">Užbaigtos užduotys</a></li>
+                            <li><a href="nauja_uzduotis.html" class="active">Nauja užduotis</a></li>
+                            <li><a href="uzduociu_tipai.html">Užduočių tipai</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="uzrasai.html" title="Užrašai">Užrašai</a>
+                        <ul>
+                            <li><a href="uzrasai.html">Užduočių užrašai</a></li>
+                            <li><a href="ind_uzrasai.html">Individualūs užrašai</a></li>
+                            <li><a href="naujas_uzrasas.html">Naujas užrašas</a></li>
+                            <li><a href="uzrasu_tipai.html">Užrašų tipai</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="Content">
+                <h2 id="pageTitle">Nauja užduotis</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tname">Užduoties pavadinimas</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="tname" name="taskname" placeholder="Užduoties pavadinimas..">
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-25">
+                            <label for="tname">Užduoties terminas</label>
+                        </div>
+                        <div class="col-75">
+                        <div class='input-group date' id='datepicker'>
+                                <input type='date' class="form-control" />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                        </div></div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="task_type">Užduoties tipas</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="country" name="country">
+                            <option value="uni">Universitetas</option>
+                            <option value="work">Darbas</option>
+                            <option value="freetime">Laisvalaikis</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Užduoties aprašymas</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Aprašykite užduotį.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Pridėti užduotį">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy; Užduočių planavimo sistema</p>
+    </div>
+    </div>
 </body>
+
 </html>

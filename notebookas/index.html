@@ -26,23 +26,21 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Užduočių planuoklis</title>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 	  		// čia rašomas JQuery kodas
-		  	$('#Menu ').mouseover(function() { // užvedus pelyte
-		  		$(this).css('cursor', 'pointer'); // pakeičiamas pelytės žymeklis
-		  	});
-	  		
-	  		$('#Menu ').click(function() { // paspaudus contentLeft h2 elem.
-				$('#Menu ul ').slideToggle(); // slepiamas/rodomas ul meniu elem.
+		  	$('header').mouseover(function() { // užvedus pelyte
+				$(this).css('cursor', 'pointer'); // pakeičiamas pelytės žymeklis
 			});
+	  		
 		});
 	</script>
 </head>
 <body>
 	<div id="body">
 		<div id="header">
-		    <h2 id="slogan">Užduočių planavimo sistema</h2>
+		    <h2>Užduočių planavimo sistema</h2>
 		</div>
 		<div id="content">
 			<div id="Menu">
@@ -68,9 +66,21 @@
 			</div>
 			<div id="Content">
 				<h2 id="pageTitle">Dabar vykdomos užduotys</h2>
-				<p>Tempor lacus aliquam class sapien per lacinia. Rutrum dolor malesuada.
-				Nullam risus nullam nibh suscipit. Pulvinar dolor ligula. Pulvinar urna litora a dapibus. Aliquet magna rutrum urna convallis. Sapien duis montes. Phasellus et magnis non venenatis risus consequat.
-				</p>
+				<div class="newsItem">
+					<p class="task_name"><a>Sukurti HTML ir CSS šabloną </a></p>
+					<p class="task_deadline"><a>Atlikimo data: 2019-10-08  &nbsp; Atlikta: 50%</a> </p>
+					<p class="task_notes"> Sukurtas puslapio šablonas, reikia papildyti lentelės atvaizdavimą.  </p>
+				</div>
+				<div class="newsItem">
+					<p class="task_name"><a>Sukurti HTML ir CSS šabloną </a></p>
+					<p class="task_deadline"><a>Atlikimo data: 2019-10-08  &nbsp; Atlikta: 50%</a> </p>
+					<p class="task_notes"> Sukurtas puslapio šablonas, reikia papildyti lentelės atvaizdavimą.  </p>
+				</div>
+				<div class="newsItemLast">
+					<p class="task_name"><a>Sukurti HTML ir CSS šabloną </a></p>
+					<p class="task_deadline"><a>Atlikimo data: 2019-10-08  &nbsp; Atlikta: 50%</a></p> 
+					<p class="task_notes"> Sukurtas puslapio šablonas, reikia papildyti lentelės atvaizdavimą.  </p>
+				</div>
 			</div>
 		</div>
 		<div id="footer">

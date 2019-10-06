@@ -1,3 +1,5 @@
+
+
 body{
     color: #8A8985; /*teskto spalva */
     background: #62929E;
@@ -7,9 +9,9 @@ body{
 
 }
 
-a {
-	color: #ca4c44;
-}
+/* a {
+	color: #0A567D;
+} */
 
 /* pagrindinis puslapio blokas */
 #body {
@@ -41,7 +43,7 @@ a {
     float: left;
     width: 200px;
     height: 40px;
-    background-color: black;
+    background-color: blue;
     opacity: .8;
     line-height: 40px;
     text-align: center;
@@ -49,12 +51,17 @@ a {
 }
 #Menu ul li a{
     text-decoration: none;
-    color: white; /* teksto spalva meniu juostoje */
+    color: black; /* teksto spalva meniu juostoje */
     display: block;
+}
+#Menu:hover{
+    background: none !important;
 }
 #Menu ul li a:hover{
 
-    background-color: #9FA1A2; 
+    z-index: 10;
+     background-color: rgb(216, 9, 9);  
+
 }
 #Menu ul li ul li{
     display:none;
@@ -65,6 +72,7 @@ a {
 #Menu ul li:hover ul li a.active {
     color: #0B7DCB;
     text-decoration: block;
+ 
 
 }
 #Menu ul li a.active{
@@ -85,6 +93,7 @@ a {
 
 }
 
+
 h2#pageTitle {
 	font-size: 26px;
 	margin: 10px 0px 0px 15px;
@@ -93,6 +102,8 @@ h2#pageTitle {
 }
 
 .newsItem {
+    
+    border-top: 1px solid silver; 
 	border-bottom: 1px solid silver;
 }
 
@@ -105,12 +116,115 @@ h2#pageTitle {
 	margin-right: 15px;
 }
 
-.newsItem p#title {
-	font-weight: bold;
+.newsItem p.task_name {
+    color: #0A567D;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.newsItem p.task_deadline{
+    font-weight: bold;
+    font-size: 16px;
+}
+.newsItemLast p.task_name {
+    color: #0A567D;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+.newsItemLast p.task_deadline {
+    font-weight: bold;
+    font-size: 16px;
+
+}
+.newsItem p.task_type_name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.newsItemLast p.task_type_name {
+ 
+    font-weight: bold;
+    font-size: 20px;
 }
 
+/* Formos laukai*/
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+  }
+  input[type=date], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 15px;
+    display: inline-block;
+    color:#0A567D;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #0B7DCB;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #085dfa;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: 16px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+   /* Floating column for inputs: 75% width */
+   #datepickre .col-75 {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  
 /* apatinė puslapio dalis */
-#footer {
+#footer{
 	width: 1000px;
 	height: 40px;
 
