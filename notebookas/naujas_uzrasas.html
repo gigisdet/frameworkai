@@ -1,97 +1,102 @@
-<!--<html>
-	<link href ='style.css' rel='stylesheet'>
-	<ul>
-		<li><a>Home</a></li>
-		<li><a>Tasks</a>
-			<ul>
-				<li><a>Active tasks</a></li>
-				<li><a>Completed tasks</a></li>
-				<li><a>New task</a></li>
-				<li><a>Tasks categories</a></li>
-			</ul>
-		</li>	
-		<li><a>Notes</a>
-			<ul>
-				<li><a>Tasks notes</a></li>
-				<li><a>Individual notes</a></li>
-				<li><a>New note</a></li>
-				<li><a>Notes categories</a></li>
-			</ul>
-		</li>	
-	</ul>
-</html> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Užduočių planuoklis</title>
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Užduočių planuoklis</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#addNoteForm').submit(function(e) {
+                var name = document.getElementById("tname").value;
+                if (name == '') {
+
+                    e.preventDefault();
+                    alert('Įveskite užrašo pavadinimą');
+                }
+            });
+        });
+    </script>
 </head>
+
 <body>
-	<div id="body">
-		<div id="header">
-		    <h2 id="slogan">Užduočių planavimo sistema</h2>
-		</div>
-		<div id="content">
-			<div id="Menu">
-				<ul>
-					<li><a href="index.html" title="Pagrindinis">Pagrindinis</a></li>
-					
-					<li><a href="uzduotys.html" title="Užduotys">Užduotys</a>
-					<ul>
-						<li><a href="uzduotys.html" >Aktyvios užduotys</a></li>
-						<li><a href="uzbaigtos_uzduotys.html">Užbaigtos užduotys</a></li>
-						<li><a href="nauja_uzduotis.html">Nauja užduotis</a></li>
-						<li><a href="uzduociu_tipai.html">Užduočių tipai</a></li>
-						
-					 </ul></li>
-					<li><a href="uzrasai.html" title="Užrašai" class="active">Užrašai</a>
-					<ul>
-						<li><a href="uzrasai.html" >Užduočių užrašai</a></li>
-						<li><a href="ind_uzrasai.html" >Individualūs užrašai</a></li>
-						<li><a href="naujas_uzrasas.html" class="active">Naujas užrašas</a></li>
-						<li><a href="uzrasu_tipai.html">Užrašų tipai</a></li>
-					 </ul></li>
-				</ul>
-			</div>
-            <div id="Content">
-                    <h2 id="pageTitle">Naujas užrašas</h2>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="tname">Užrašo pavadinimas</label>
+    <div id="body">
+        <div id="header">
+            <h2 id="slogan">Užduočių planavimo sistema</h2>
+        </div>
+        <div id="content">
+            <div id="Menu">
+                <div class="navbar">
+                    <a href="index.html" title="Pagrindinis">Pagrindinis</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">
+                            <div>Užduotys</div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" id="tname" name="taskname" placeholder="Užrašo pavadinimas..">
+                        <div class="dropdown-content">
+                            <a href="uzduotys.html">Aktyvios užduotys</a>
+                            <a href="uzbaigtos_uzduotys.html">Užbaigtos užduotys</a>
+                            <a href="nauja_uzduotis.html">Nauja užduotis</a>
+                            <a href="uzduociu_tipai.html">Užduočių tipai</a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="task_type">Užrašo tipas</label>
+                    <div class="dropdown">
+                        <div class="active">
+                            <div class="dropbtn">Užrašai</div>
                         </div>
-                        <div class="col-75">
-                            <select id="country" name="country">
+                        <div class="dropdown-content">
+                            <a href="uzrasai.html">Užduočių užrašai</a>
+                            <a href="ind_uzrasai.html">Individualūs užrašai</a>
+                            <a href="naujas_uzrasas.html" class="active">Naujas užrašas</a>
+                            <a href="uzrasu_tipai.html">Užrašų tipai</a>
+                        </div>
+                    </div>
+
+                    <div class="login">
+                        <a href="login.html">Prisijungti</a>
+                    </div>
+                </div>
+            </div>
+            <div id="Content">
+                <h2 id="pageTitle">Naujas užrašas</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tname">Užrašo pavadinimas</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="tname" name="taskname" placeholder="Užrašo pavadinimas..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="task_type">Užrašo tipas</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="country" name="country">
                                 <option value="uni">Universiteto</option>
                                 <option value="work">Darbo</option>
                                 <option value="freetime">Laisvalaikio</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="subject">Užrašas</label>
-                        </div>
-                        <div class="col-75">
-                            <textarea id="subject" name="subject" placeholder="Rašykite ką norite.." style="height:200px"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="Pridėti užduotį">
                     </div>
                 </div>
-		</div>
-		<div id="footer">
-			<p>Copyright &copy; Užduočių planavimo sistema</p>
-		</div>
-	</div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Užrašas</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Rašykite ką norite.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <form action="naujas_uzrasas.html" method="POST" id="addNoteForm">
+                    <div class="row">
+                        <input type="submit" value="Pridėti užrašą">
+                </form>
+                </div>
+            </div>
+            <div id="footer">
+                <p>Copyright &copy; Užduočių planavimo sistema</p>
+            </div>
+        </div>
 </body>
+
 </html>

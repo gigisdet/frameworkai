@@ -1,182 +1,207 @@
-
-
-body{
-    color: #8A8985; /*teskto spalva */
+body {
+    color: #8A8985;
+    /* teskto spalva  */
     background: #62929E;
-    background-size : cover;
-	font-family: Arial, Helvetica, sans-serif; /* šriftas */
-    font-size: 12px; /* teksto dydis */
-
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    /* šriftas */
+    font-size: 12px;
+    /* teksto dydis */
+    width: 1000px;
+    margin: 0px auto;
 }
 
-/* a {
-	color: #0A567D;
-} */
 
-/* pagrindinis puslapio blokas */
-#body {
-
-	width: 1000px;
-    margin: 0px auto; /* bloko centravimas puslapio viduje */
-
-}
 /* viršutinė puslapio dalis */
+
 #header {
-	width: 1000px;
-	height: 80px;
-
+    width: 1000px;
+    height: 80px;
     text-align: center;
-    
     font-size: 28px;
-
-	background-color: transparent;
+    background-color: transparent;
     color: #080C0A;
     vertical-align: middle;
 }
 
-#Menu ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+.active {
+    border: none;
+    background: rgb(16, 12, 231);
 }
-#Menu ul li{
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.login {
+    margin-left: 899px;
+}
+
+.navbar a {
     float: left;
-    width: 200px;
-    height: 40px;
-    background-color: black;
-    opacity: 0.8; 
-    line-height: 40px;
+    font-size: 16px;
+    color: white;
     text-align: center;
-    font-size: 20px;
-}
-#Menu ul li a{
+    padding: 14px 16px;
     text-decoration: none;
-    color: black; /* teksto spalva meniu juostoje */
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #21e2e9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7acbce;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
-#Menu ul li a:hover{
 
-    z-index: 10;
-    background-color: rgb(216, 9, 9);  
-}
-
-#Menu .darker {
-    opacity: 1 !important;
-}
-
-
-#Menu ul li ul li{
-    display:none;
-}
-#Menu ul li:hover ul li{
-    display:block;
-}
-#Menu ul li:hover ul li a.active {
-    color: #0B7DCB;
-    text-decoration: block;
- 
-
-}
-#Menu ul li a.active{
-    text-decoration: underline;
-}
 
 /* turinio blokelis */
+
 #Content {
-	width: 1000px;
-	min-height: 550px; /* minimalus blokelio aukštis */
+    width: 1000px;
+    min-height: 550px;
+    /* minimalus blokelio aukštis */
     border-left: 1px solid silver;
     border-right: 1px solid silver;
     border-bottom: 1px solid silver;
     border-top: 1px solid silver;
-    float: left; /* blokelio pozicija */
-
-	background-color: rgba(255,255,255,0.7);
-
+    float: left;
+    /* blokelio pozicija */
+    background-color: rgb(255, 255, 255);
 }
 
-
 h2#pageTitle {
-	font-size: 26px;
-	margin: 10px 0px 0px 15px;
+    font-size: 26px;
+    margin: 10px 0px 0px 15px;
     font-weight: normal;
     color: black;
+    border-bottom: 1px solid silver;
 }
 
 .newsItem {
-    
-    border-top: 1px solid silver; 
-	border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
 }
 
 .newsItemLast {
-	border: 0px;
+    border: 0px;
 }
 
 #Content p {
-	margin-left: 15px;
-	margin-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .newsItem p.task_name {
     color: #0A567D;
     font-weight: bold;
     font-size: 20px;
-
 }
-.newsItem p.task_deadline{
+
+.newsItem p.task_deadline {
     font-weight: bold;
     font-size: 16px;
 }
+
 .newsItemLast p.task_name {
     color: #0A567D;
-
     font-weight: bold;
     font-size: 20px;
 }
+
 .newsItemLast p.task_deadline {
     font-weight: bold;
     font-size: 16px;
+}
 
-}
 .newsItem p.task_type_name {
+    color: #0A567D;
     font-weight: bold;
     font-size: 20px;
 }
+
 .newsItemLast p.task_type_name {
- 
+    color: #0A567D;
     font-weight: bold;
     font-size: 20px;
 }
+
 
 /* Formos laukai*/
 
+
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+
+input[type=text],
+select,
+textarea {
     width: 80%;
     padding: 12px;
     border: 1px solid silver;
     box-sizing: border-box;
-  }
-  input[type=date], select, textarea{
+}
+
+input[type=date],
+select,
+textarea {
     width: 80%;
     padding: 12px;
     border: 1px solid silver;
     box-sizing: border-box;
-  }
-  
-  /* Style the label to display next to the inputs */
-  label {
+}
+
+
+/* Style the label to display next to the inputs */
+
+label {
     padding: 12px 12px 12px 15px;
     display: inline-block;
-    color:#0A567D;
+    color: #0A567D;
     font-size: 16px;
     font-weight: bold;
+}
 
-  }
-  
-  /* Style the submit button */
-  input[type=submit] {
+
+/* Style the submit button */
+
+input[type=submit] {
     background-color: #0B7DCB;
     color: white;
     padding: 12px 20px;
@@ -186,59 +211,66 @@ input[type=text], select, textarea{
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
-  
-  /* Style the container */
-  .container {
+}
+
+
+/* Style the container */
+
+.container {
     border-radius: 5px;
     background-color: #085dfa;
     padding: 20px;
-  }
-  
-  /* Floating column for labels: 25% width */
-  .col-25 {
+}
+
+
+/* Floating column for labels: 25% width */
+
+.col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
     font-size: 16px;
-  }
-  
-  /* Floating column for inputs: 75% width */
-  .col-75 {
+}
+
+
+/* Floating column for inputs: 75% width */
+
+.col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
-   /* Floating column for inputs: 75% width */
-   #datepickre .col-75 {
+}
+
+
+/* Floating column for inputs: 75% width */
+
+#datepickre .col-75 {
     float: left;
     width: 65%;
     margin-top: 6px;
-  }
+}
 
-  
-  /* Clear floats after the columns */
-  .row:after {
+
+/* Clear floats after the columns */
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
- 
-  
+}
+
+
 /* apatinė puslapio dalis */
-#footer{
-	width: 1000px;
-	height: 40px;
 
-	float: left;
-
-	color: black;
-
+#footer p {
+    width: 1000px;
+    height: 40px;
+    float: left;
+    color: black;
     display: table;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
     font-weight: bold;
-
 }
